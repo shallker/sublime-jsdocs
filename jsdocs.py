@@ -354,14 +354,14 @@ class JsdocsParser(object):
         if retType is not None:
             typeInfo = ''
             if self.settings['typeInfo']:
-                typeInfo = ' %s${1:%s}%s' % (
+                typeInfo = '%s${1:%s}%s' % (
                     "{" if self.settings['curlyTypes'] else "",
                     retType or "[type]",
                     "}" if self.settings['curlyTypes'] else ""
                 )
             format_args = [
                 self.viewSettings.get('jsdocs_return_tag') or '@return',
-                typeInfo
+                "{" + typeInfo + "}"
             ]
 
             if (self.viewSettings.get('jsdocs_return_description')):
