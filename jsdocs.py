@@ -540,7 +540,7 @@ class JsdocsJavascript(JsdocsParser):
         identifier = '[a-zA-Z_$][a-zA-Z_$0-9]*'
         self.settings = {
             # curly brackets around the type information
-            "curlyTypes": True,
+            "curlyTypes": False,
             'typeInfo': True,
             "typeTag": self.viewSettings.get('jsdocs_override_js_var') or "type",
             # technically, they can contain all sorts of unicode, but w/e
