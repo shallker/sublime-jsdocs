@@ -361,7 +361,7 @@ class JsdocsParser(object):
                 )
             format_args = [
                 self.viewSettings.get('jsdocs_return_tag') or '@return',
-                "{" + typeInfo + "}"
+                " {" + typeInfo + "}",
             ]
 
             if (self.viewSettings.get('jsdocs_return_description')):
